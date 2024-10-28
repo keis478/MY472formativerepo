@@ -36,13 +36,13 @@ git branch
 ```
 
 ```{r}
-data <- iris
-head(data)
+data_new <- iris
+head(data_new)
 
-data$log_Sepal.Length<- log(data$Sepal.Length)
-data$log_Sepal.Width <- log(data$Sepal.Width)
+data_new$log_Sepal.Length<- log(data_new$Sepal.Length)
+data_new$log_Sepal.Width <- log(data_new$Sepal.Width)
 
-summary(data)
+summary(data_new)
 ```
 ```{bash}
 git add pipeline1.Rmd
