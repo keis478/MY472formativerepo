@@ -14,7 +14,9 @@ This is an R Markdown document. Markdown is a simple formatting syntax for autho
 
 When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
 
+### Exercise 1 Pipeline 1
 ```{r cars}
+# exercise pipeline 1
 data <- cars
 head(data)
 
@@ -25,3 +27,27 @@ data$dist_bin <- cut(data$dist, breaks = 3, labels = c("short", "medium", "long"
 
 summary(data)
 ```
+
+### Exercise 1 Pipeline 2
+```{bash}
+git branch dev
+git checkout dev
+git branch
+```
+
+```{r}
+data <- iris
+head(data)
+
+data$log_Sepal.Length<- log(data$Sepal.Length)
+data$log_Sepal.Width <- log(data$Sepal.Width)
+
+summary(data)
+```
+```{bash}
+git add pipeline1.Rmd
+git commit -m "add to dev"
+git push --set-upstream origin final
+git push 
+```
+
